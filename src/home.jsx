@@ -1,5 +1,5 @@
 // import React from 'react'
-// import { Button, Link } from '@mui/material';
+import { Container } from '@mui/material';
 // import Hero from './compoments/hero'
 // import Cards from './compoments/cards'
 // import NavBar from './compoments/navbar'
@@ -8,17 +8,16 @@
 // import Services from './compoments/services'
 // import Info from './compoments/info'
 // import Footer from './compoments/footer'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import Login from './Auth/login'
 
-// export default function Home() {
-//     return ( 
-//     <div>
-//         <NavBar />
-//         <Hero />
-//         <About />
-//         <Services />
-//         <Info />
-//         <Cards />
-//         <Footer />
-//     </div> );
-// }
+export default function Home() {
+    
+    
+    return ( 
+    <Login />
+     );
+}
 

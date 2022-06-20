@@ -33,13 +33,12 @@ export default function Login() {
         const url ="Http://localhost:8000/api/auth/login"; 
         const response = await axios.post(url, data);
         const user = jwt_decode(response.data.token);
-        console.log(user);
+        // console.log(user);
+        console.log(response.data.token);
+        const auth = response.data.token
         document.cookie = "token=" + JSON.stringify(response.data.token)
-        if(user.id === id){
-          console.log("giii");
-        }
-
-        if(response.status===201){
+        console.log(user.id);
+        if(auth){
           const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -56,6 +55,8 @@ export default function Login() {
             icon: 'success',
             title: 'Welcom Again!',
           })
+
+          navigate('/tasks')
         }
 
         } catch (error) {
