@@ -12,6 +12,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Login from './Auth/login'
+import Tasks from './compoments/Tasks'
 
 export default function Home() {
     
