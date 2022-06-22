@@ -10,14 +10,12 @@ import {
     TableBody,
     Paper,
     TableContainer,
-    Container,
-    Button,
-    TablePagination
+    Container
   } from '@mui/material';
   import { Link } from 'react-router-dom';
   import AddIcon from '@mui/icons-material/Add';
   import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-  import HomeIcon from '@mui/icons-material/Home';
+  
 
 
 export default function ReadCommand() {
@@ -53,11 +51,8 @@ export default function ReadCommand() {
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
-                        <Link to='/book'>
+                        <Link to='/new'>
                             <AddIcon />
-                        </Link>
-                        <Link to='/'>
-                            <HomeIcon />
                         </Link>
                         <TableRow>
                             <TableCell>ID</TableCell>
@@ -84,7 +79,7 @@ export default function ReadCommand() {
                                 <TableCell align="right">{task.type}</TableCell>
                                 <TableCell align="right">{task.dueDate}</TableCell>
                                 <TableCell align="right">{task.label}</TableCell>
-                                <TableCell align="right">{task.status}</TableCell>
+                                {/* <TableCell align="right">{task.status}</TableCell> */}
                                 <TableCell align="right">
                                     <DeleteOutlineIcon color="error" onClick={() => onDelete(task._id)}>Delete</DeleteOutlineIcon>
                                     {/* <editHotel /> */}

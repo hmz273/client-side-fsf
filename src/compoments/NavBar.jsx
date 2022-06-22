@@ -11,10 +11,11 @@ function NavBar() {
   const { _id } = useParams()
   const cookies = new Cookies();
   const token = cookies.get("token");
+  // console.log(token);
 
   if(token){
     const auth = jwt_decode(token)
-    console.log(auth.id);
+    // console.log(auth);
     return ( 
       <Container sx={{ marginTop: 3, boxShadow: 1 }} position="sticky" maxWidth="l">
         <Grid container spacing={2}>

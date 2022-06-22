@@ -34,10 +34,10 @@ export default function Login() {
         const response = await axios.post(url, data);
         const user = jwt_decode(response.data.token);
         // console.log(user);
-        console.log(response.data.token);
+        // console.log(response.data.token);
         const auth = response.data.token
         document.cookie = "token=" + JSON.stringify(response.data.token)
-        console.log(user.id);
+        // console.log(user);
         if(auth){
           const Toast = Swal.mixin({
             toast: true,
