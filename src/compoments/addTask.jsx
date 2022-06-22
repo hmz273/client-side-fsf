@@ -19,7 +19,7 @@ export default function NewTask() {
     
 
     const postData = () => {
-        axios.post(`Http://localhost:8000/api/tasks/new`, { withCredentials: true } , {
+        axios.post(`Http://localhost:8000/api/tasks/new`, {
             name,
             description,
             type,
